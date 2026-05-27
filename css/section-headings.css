@@ -1,0 +1,29 @@
+.section-heading--compact {
+  max-width: 980px;
+  margin: 0 auto 34px;
+  text-align: left;
+}
+
+.info-group__heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.info-group__heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.info-group__heading h3 {
+  flex: 0 0 auto;
+  color: var(--muted-2);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

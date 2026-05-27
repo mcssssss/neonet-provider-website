@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Тарифи NeoNet для Новояворівська та приватного сектору. Інтернет до 1 Гбіт/с і додаткові послуги."
+    />
+    <title>Тарифи | NeoNet</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true">
+      <span class="site-bg__circle--one"></span>
+      <span class="site-bg__circle--two"></span>
+      <span class="site-bg__circle--three"></span>
+    </div>
+    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="logo"
+          href="./index.html"
+          aria-label="NeoNet головна сторінка"
+        >
+          <img src="./assets/brand/logo-neonet.png" alt="NeoNet" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="main-navigation" aria-label="Головна навігація">
+          <a class="nav__link" href="./index.html">Головна</a>
+          <a class="nav__link active" href="./price.html" aria-current="page"
+            >Тарифи</a
+          >
+          <a class="nav__link" href="./promotions.html">Акції</a>
+          <a class="nav__link" href="./support.html">Підтримка</a>
+          <a
+            class="nav__link"
+            href="https://oplata.neonet.com.ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Особистий кабінет</a
+          >
+          <a
+            class="nav__link nav__link--payment"
+            href="https://next.privat24.ua/payments/form/%7B%22token%22:%2217db19bb152729ad6519b4be49480de763diioe0%22%7D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Оплата онлайн
+          </a>
+        </nav>
+
+        <a
+          class="btn btn--small header__btn"
+          href="https://next.privat24.ua/payments/form/%7B%22token%22:%2217db19bb152729ad6519b4be49480de763diioe0%22%7D"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Оплата онлайн</a
+        >
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container page-hero__content">
+          <p class="eyebrow">Послуги NeoNet</p>
+          <h1>Тарифи на інтернет</h1>
+          <p class="page-hero__text">
+            Підключення для квартир, будинків та приватного сектору у
+            Новояворівську.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn" href="tel:+380676751539">Підключити інтернет</a>
+            <a class="btn btn--ghost" href="#tariffs">Дивитися тарифи</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="tariffs">
+        <div class="container">
+          <div
+            class="tariff-switcher"
+            role="tablist"
+            aria-label="Категорії тарифів"
+          >
+            <button
+              class="tariff-switcher__btn is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="apartments-panel"
+              data-tariff-tab="apartments"
+            >
+              Місто
+            </button>
+
+            <button
+              class="tariff-switcher__btn"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="private-sector-panel"
+              data-tariff-tab="private-sector"
+            >
+              Приватний сектор
+            </button>
+          </div>
+
+          <div class="tariff-panels">
+            <section
+              class="tariff-panel is-active"
+              id="apartments-panel"
+              role="tabpanel"
+              data-tariff-panel="apartments"
+            >
+              <div class="tariff-panel__heading">
+                <p>
+                  <span>Підключення до мережі</span><strong>безкоштовно</strong>
+                </p>
+                <p>
+                  <span>Первинний внесок на рахунок</span
+                  ><strong>300 грн</strong>
+                </p>
+              </div>
+              <div class="tariff-card-grid">
+                <article class="tariff-plan-card">
+                  <h3>Базовий</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>100</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>10</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Доступ до інтернету</p>
+                </article>
+                <article class="tariff-plan-card">
+                  <h3>Базовий GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>100</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>10</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+                <article class="tariff-plan-card">
+                  <h3>Потужний GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>500</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>11,67</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+                <article class="tariff-plan-card tariff-plan-card--accent">
+                  <h3>Професійний GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>1000</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>16</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+              </div>
+            </section>
+
+            <section
+              class="tariff-panel"
+              id="private-sector-panel"
+              role="tabpanel"
+              data-tariff-panel="private-sector"
+              hidden
+            >
+              <div class="tariff-panel__heading">
+                <p>
+                  <span>Підключення до мережі</span><strong>договірна</strong>
+                </p>
+                <p>
+                  <span>Первинний внесок на рахунок</span
+                  ><strong>300 грн</strong>
+                </p>
+                <p class="tariff-panel__coverage">
+                  <span>Працюємо у населених пунктах</span>
+                  <strong>
+                    ЖК, Шклівська, К4, Стадники, Солиги, Стені, Зелена, Домажир,
+                    Ямельня, Синє-очко
+                  </strong>
+                </p>
+              </div>
+              <div class="tariff-card-grid">
+                <article class="tariff-plan-card">
+                  <h3>Базовий</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>100</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>10,5</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Доступ до інтернету</p>
+                </article>
+                <article class="tariff-plan-card">
+                  <h3>Базовий GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>100</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>10,5</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+                <article class="tariff-plan-card">
+                  <h3>Потужний GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>500</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>12,17</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+                <article class="tariff-plan-card tariff-plan-card--accent">
+                  <h3>Професійний GPON</h3>
+                  <div class="tariff-speed">
+                    <span>до</span><strong>1000</strong><em>Мбіт/с</em>
+                  </div>
+                  <p class="tariff-price"><strong>18</strong> грн/добу</p>
+                  <a class="tariff-connect" href="tel:+380676751539"
+                    >Підключити</a
+                  >
+                  <p class="tariff-note">Оптоволоконний інтернет</p>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <section class="service-card-section">
+            <div class="section-heading section-heading--compact">
+              <p class="eyebrow">Сервіс NeoNet</p>
+              <h2>Додаткові послуги</h2>
+            </div>
+            <div class="service-card-grid">
+              <article class="service-card">
+                <img src="./assets/icons/ip-address.png" alt="" aria-hidden="true" />
+                <div>
+                  <span>Статична IP-адреса</span><strong>3 грн/добу</strong>
+                </div>
+              </article>
+              <article class="service-card">
+                <img src="./assets/icons/postpone.png" alt="" aria-hidden="true" />
+                <div>
+                  <span>Відстрочка платежу на 7 днів</span
+                  ><strong>1 грн</strong>
+                </div>
+              </article>
+              <article class="service-card">
+                <img src="./assets/icons/freeze.png" alt="" aria-hidden="true" />
+                <div>
+                  <span>Призупинення надання послуг («Заморозка»)</span
+                  ><strong>1 раз на рік безкоштовно, надалі 35 грн</strong>
+                </div>
+              </article>
+              <article class="service-card">
+                <img src="./assets/icons/repetitive.png" alt="" aria-hidden="true" />
+                <div>
+                  <span
+                    >Повторне підключення після відключення понад 100 діб</span
+                  ><strong>50 грн</strong>
+                </div>
+              </article>
+              <article class="service-card">
+                <img src="./assets/icons/specialist.png" alt="" aria-hidden="true" />
+                <div>
+                  <span
+                    >Виклик фахівця для налагодження мережевого
+                    підключення</span
+                  ><strong>50 грн за кожні 30 хв роботи</strong>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="megogo-tariffs" aria-labelledby="omega-tariffs-title">
+            <div class="section-heading section-heading--compact">
+              <p class="eyebrow">Інтерактивне телебачення</p>
+              <h2 id="omega-tariffs-title">Види тарифних планів OMEGA TV</h2>
+            </div>
+            <div class="megogo-plan-grid megogo-plan-grid--omega">
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />UA: Ефір</h3>
+                <p><strong>281</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>120</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />UA: Ефір + Кіно</h3>
+                <p><strong>293</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>159</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />Преміум</h3>
+                <p><strong>293</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>139</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />ПРЕМІУМ + Кіно</h3>
+                <p><strong>293</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>179</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />VIP HD</h3>
+                <p><strong>308</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>169</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>OMEGA<br />VIP HD + Кіно</h3>
+                <p><strong>308</strong><span>каналів</span></p>
+                <p class="megogo-price"><strong>209</strong> грн/міс</p>
+                <a
+                  href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+            </div>
+          </section>
+
+          <section
+            class="megogo-tariffs"
+            aria-labelledby="megogo-tariffs-title"
+          >
+            <div class="section-heading section-heading--compact">
+              <p class="eyebrow">Інтерактивне телебачення</p>
+              <h2 id="megogo-tariffs-title">Види тарифних планів MEGOGO</h2>
+            </div>
+            <div class="megogo-plan-grid">
+              <article class="megogo-plan-card">
+                <h3>MEGOGO<br />Легка</h3>
+                <p><strong>365+</strong><span>каналів</span></p>
+                <p><strong>11 500+</strong><span>фільмів</span></p>
+                <p class="megogo-price"><strong>129</strong> грн/міс</p>
+                <a
+                  href="./megogo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>MEGOGO<br />Оптимальна</h3>
+                <p><strong>430+</strong><span>каналів</span></p>
+                <p><strong>12 500+</strong><span>фільмів</span></p>
+                <p class="megogo-price"><strong>249</strong> грн/міс</p>
+                <a
+                  href="./megogo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>MEGOGO<br />Максимальна</h3>
+                <p><strong>485+</strong><span>каналів</span></p>
+                <p><strong>19 500+</strong><span>фільмів</span></p>
+                <p class="megogo-price"><strong>449</strong> грн/міс</p>
+                <a
+                  href="./megogo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>MEGOGO<br />Кіно+</h3>
+                <p><strong>25+</strong><span>каналів</span></p>
+                <p><strong>12 000+</strong><span>фільмів</span></p>
+                <p class="megogo-price"><strong>129</strong> грн/міс</p>
+                <a
+                  href="./megogo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+              <article class="megogo-plan-card">
+                <h3>MEGOGO<br />Спорт</h3>
+                <p><strong>40+</strong><span>каналів</span></p>
+                <p><strong>18+</strong><span>контент</span></p>
+                <p class="megogo-price"><strong>349</strong> грн/міс</p>
+                <a
+                  href="./megogo.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Перелік каналів</a
+                >
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a
+            class="logo logo--footer"
+            href="./index.html"
+            aria-label="NeoNet головна сторінка"
+          >
+            <img src="./assets/brand/logo-neonet.png" alt="NeoNet" />
+          </a>
+          <p>
+            Інтернет для дому, роботи, навчання та розваг у Новояворівську та
+            Яворівському районі.
+          </p>
+        </div>
+        <div>
+          <h3>Розклад роботи</h3>
+          <p>Понеділок – субота: 9:00–19:00</p>
+          <p>Неділя – вихідний</p>
+        </div>
+        <div class="footer__contacts">
+          <h3>Контакти</h3>
+          <p><a href="tel:+380676751539">(067) 675-15-39</a></p>
+          <p>
+            <a href="mailto:neonet.network@gmail.com">
+              neonet.network@gmail.com
+            </a>
+          </p>
+          <p>Новояворівськ, вул. Січових Стрільців, 16</p>
+
+          <div class="footer-socials" aria-label="Соціальні мережі NeoNet">
+            <a
+              href="https://t.me/neonet_info"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Telegram"
+            >
+              <img src="./assets/social/telegram.png" alt="" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/neonet_network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet в Instagram"
+            >
+              <img src="./assets/social/instagram.png" alt="" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/neonet.network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Facebook"
+            >
+              <img src="./assets/social/facebook.png" alt="" />
+            </a>
+
+            <a
+              href="https://invite.viber.com/?g2=AQA4AfKOGj3h60tVKaJNBpGEG0kb1jlxvSAdZjr5xUcCKQ4T0vMKO5RHuD%2FKEEB9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Viber"
+            >
+              <img src="./assets/social/viber.png" alt="" />
+            </a>
+          </div>
+          <div class="footer-theme">
+            <span>Тема сайту</span>
+            <button
+              class="theme-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="Перемкнути тему сайту"
+              aria-pressed="false"
+            >
+              <span aria-hidden="true">☀</span>
+              <span aria-hidden="true">☾</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NeoNet — інтернет-провайдер у Новояворівську та Яворівському районі. Швидкісний інтернет, інтерактивне телебачення та технічна підтримка."
+    />
+    <title>NeoNet — інтернет твого міста</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true">
+      <span class="site-bg__circle--one"></span>
+      <span class="site-bg__circle--two"></span>
+      <span class="site-bg__circle--three"></span>
+    </div>
+    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+    <header class="header">
+      <div class="container header__inner">
+        <a
+          class="logo"
+          href="./index.html"
+          aria-label="NeoNet головна сторінка"
+        >
+          <img src="./assets/brand/logo-neonet.png" alt="NeoNet" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="main-navigation" aria-label="Головна навігація">
+          <a class="nav__link active" href="./index.html" aria-current="page"
+            >Головна</a
+          >
+          <a class="nav__link" href="./price.html">Тарифи</a>
+          <a class="nav__link" href="./promotions.html">Акції</a>
+          <a class="nav__link" href="./support.html">Підтримка</a>
+          <a
+            class="nav__link"
+            href="https://oplata.neonet.com.ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Особистий кабінет</a
+          >
+          <a
+            class="nav__link nav__link--payment"
+            href="https://next.privat24.ua/payments/form/%7B%22token%22:%2217db19bb152729ad6519b4be49480de763diioe0%22%7D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Оплата онлайн
+          </a>
+        </nav>
+
+        <a
+          class="btn btn--small header__btn"
+          href="https://next.privat24.ua/payments/form/%7B%22token%22:%2217db19bb152729ad6519b4be49480de763diioe0%22%7D"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Оплата онлайн</a
+        >
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Інтернет твого міста</p>
+            <h1>Швидкісний інтернет NeoNet</h1>
+            <p class="hero__text">
+              Стабільне підключення до 1 Гбіт/с для дому, навчання, роботи та
+              розваг.
+            </p>
+            <div class="hero__actions">
+              <a class="btn" href="./price.html">Переглянути тарифи</a>
+              <a class="btn btn--ghost" href="tel:+380676751539">Подзвонити</a>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-orbit">
+              <span class="hero-orbit__glow"></span>
+              <span class="hero-orbit__ring hero-orbit__ring--one"></span>
+              <span class="hero-orbit__ring hero-orbit__ring--two"></span>
+              <span class="hero-orbit__ring hero-orbit__ring--three"></span>
+              <div class="hero-orbit__center">
+                <img src="./assets/brand/n-logo.png" alt="Logo NeoNet" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section news-section" id="news">
+        <div class="container">
+          <div class="news-slider__header">
+            <div>
+              <p class="eyebrow">Новини NeoNet</p>
+              <h2>Останні новини та оголошення</h2>
+              <p>
+                Короткі повідомлення компанії: планові роботи, оновлення тарифів
+                та корисна інформація для абонентів.
+              </p>
+            </div>
+            <div class="news-slider__controls" aria-label="Керування новинами">
+              <button
+                class="news-slider__btn"
+                type="button"
+                data-news-prev
+                aria-label="Попередня новина"
+              >
+                ‹
+              </button>
+              <button
+                class="news-slider__btn"
+                type="button"
+                data-news-next
+                aria-label="Наступна новина"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="news-slider"
+            data-news-slider
+            aria-label="Список новин NeoNet"
+          >
+            <!--
+              Щоб змінити новину:
+              1. Заміни дату в time.
+              2. Заміни тег, заголовок і текст.
+              3. За потреби зміни href у посиланні.
+              Щоб додати новину — скопіюй один article.news-card і встав поруч.
+            -->
+            <article class="news-card">
+              <div class="news-card__meta">
+                <time datetime="2026-05-11">11 травня 2026</time>
+                <span>Оголошення</span>
+              </div>
+              <h3>Планові технічні роботи</h3>
+              <p>
+                Попередження про можливі короткі перерви в роботі мережі під час
+                обслуговування обладнання.
+              </p>
+              <a class="news-card__link" href="./support.html">Детальніше</a>
+            </article>
+
+            <article class="news-card">
+              <div class="news-card__meta">
+                <time datetime="2026-05-08">8 травня 2026</time>
+                <span>Тарифи</span>
+              </div>
+              <h3>Інтернет до 1 Гбіт/с</h3>
+              <p>
+                Швидкісні тарифи для дому, навчання, роботи, відео та
+                онлайн-ігор у Новояворівську.
+              </p>
+              <a class="news-card__link" href="./price.html"
+                >Переглянути тарифи</a
+              >
+            </article>
+
+            <article class="news-card">
+              <div class="news-card__meta">
+                <time datetime="2026-05-04">4 травня 2026</time>
+                <span>Оплата</span>
+              </div>
+              <h3>Зручна онлайн-оплата</h3>
+              <p>
+                Поповнюйте рахунок онлайн без черг і зайвих дзвінків — через
+                кнопку оплати або особистий кабінет.
+              </p>
+              <a
+                class="news-card__link"
+                href="https://oplata.neonet.com.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Особистий кабінет</a
+              >
+            </article>
+
+            <article class="news-card">
+              <div class="news-card__meta">
+                <time datetime="2026-04-30">30 квітня 2026</time>
+                <span>ТБ</span>
+              </div>
+              <h3>Інтерактивне телебачення</h3>
+              <p>
+                Дивіться улюблені телеканали разом із послугами інтерактивного
+                цифрового телебачення.
+              </p>
+              <a
+                class="news-card__link"
+                href="https://oplata.neonet.com.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Підключити</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="container tv-grid">
+          <div class="tv-image">
+            <img
+              src="./assets/images/interactive-tv.png"
+              alt="Інтерактивне телебачення"
+              loading="lazy"
+            />
+          </div>
+          <div class="tv-section__content">
+            <p class="eyebrow">Додаткова послуга</p>
+            <h2>Дивись улюблені телеканали разом із нами</h2>
+            <p>
+              Обирайте, підключайте та самостійно керуйте у вашому
+              <a
+                class="tv-link"
+                href="https://oplata.neonet.com.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >особистому кабінеті</a
+              >
+              абонента сучасним інтерактивним цифровим телебаченням від
+              <a
+                class="tv-link"
+                href="https://admin.hls.tv/cdn/channels/actual/all/ua/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Omega TV</a
+              >
+              або
+              <a
+                class="tv-link"
+                href="./megogo.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MEGOGO</a
+              >.
+            </p>
+            <a
+              class="btn"
+              href="https://oplata.neonet.com.ua/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Перейти до особистого кабінету</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <p class="eyebrow">Про компанію</p>
+              <h2>Стабільний інтернет для щоденного користування</h2>
+              <p>
+                NeoNet працює у Новояворівську та населених пунктах Яворівського
+                району з 2003 року. Ми надаємо швидкісний безлімітний інтернет
+                на основі сучасного обладнання та оптоволоконних технологій.
+              </p>
+              <p>
+                Наша мета — стабільне підключення без зайвих налаштувань,
+                зрозумілі тарифи, технічна підтримка та комфортний сервіс для
+                кожного абонента.
+              </p>
+            </div>
+            <div class="about-image">
+              <img
+                src="./assets/images/about-network.png"
+                alt="Підключення оптоволоконного інтернету"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <div class="about-feature-grid">
+            <article class="about-feature">
+              <img src="./assets/icons/internet.png" alt="" aria-hidden="true" />
+              <div>
+                <h3>Висока швидкість</h3>
+                <p>
+                  До 1 Гбіт/с без обмежень, щоб комфортно працювати, навчатися,
+                  грати та дивитися відео.
+                </p>
+              </div>
+            </article>
+            <article class="about-feature">
+              <img src="./assets/icons/shield.png" alt="" aria-hidden="true" />
+              <div>
+                <h3>Надійне підключення</h3>
+                <p>
+                  Оптоволоконні лінії та сучасне обладнання забезпечують
+                  стабільний сигнал.
+                </p>
+              </div>
+            </article>
+            <article class="about-feature">
+              <img
+                src="./assets/icons/customer-service.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <div>
+                <h3>Підтримка клієнтів</h3>
+                <p>
+                  Допомагаємо з підключенням, оплатою та технічними питаннями.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer--home" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a
+            class="logo logo--footer"
+            href="./index.html"
+            aria-label="NeoNet головна сторінка"
+          >
+            <img src="./assets/brand/logo-neonet.png" alt="NeoNet" />
+          </a>
+          <p>
+            Інтернет для дому, роботи, навчання та розваг у Новояворівську та
+            Яворівському районі.
+          </p>
+          <p class="footer__coverage">
+            Працюємо також у приватному секторі: ЖК, Шклівська, К4, Стадники,
+            Солиги, Стені, Зелена, Домажир, Ямельня, Синє-очко.
+          </p>
+        </div>
+        <div>
+          <h3>Розклад роботи</h3>
+          <p>Понеділок – субота: 9:00–19:00</p>
+          <p>Неділя – вихідний</p>
+        </div>
+        <div class="footer__contacts">
+          <h3>Контакти</h3>
+          <p><a href="tel:+380676751539">(067) 675-15-39</a></p>
+          <p>
+            <a href="mailto:neonet.network@gmail.com">
+              neonet.network@gmail.com
+            </a>
+          </p>
+          <p>Новояворівськ, вул. Січових Стрільців, 16</p>
+
+          <div class="footer-socials" aria-label="Соціальні мережі NeoNet">
+            <a
+              href="https://t.me/neonet_info"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Telegram"
+            >
+              <img src="./assets/social/telegram.png" alt="" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/neonet_network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet в Instagram"
+            >
+              <img src="./assets/social/instagram.png" alt="" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/neonet.network/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Facebook"
+            >
+              <img src="./assets/social/facebook.png" alt="" />
+            </a>
+
+            <a
+              href="https://invite.viber.com/?g2=AQA4AfKOGj3h60tVKaJNBpGEG0kb1jlxvSAdZjr5xUcCKQ4T0vMKO5RHuD%2FKEEB9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NeoNet у Viber"
+            >
+              <img src="./assets/social/viber.png" alt="" />
+            </a>
+          </div>
+          <div class="footer-theme">
+            <span>Тема сайту</span>
+            <button
+              class="theme-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="Перемкнути тему сайту"
+              aria-pressed="false"
+            >
+              <span aria-hidden="true">☀</span>
+              <span aria-hidden="true">☾</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

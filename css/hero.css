@@ -1,0 +1,330 @@
+.hero,
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: var(--hero-padding);
+  background: transparent;
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  --mx: 50%;
+  --my: 48%;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  z-index: 0;
+  width: 100vw;
+  height: 82%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.72;
+  background-image:
+    radial-gradient(
+      circle 360px at var(--mx) var(--my),
+      var(--hero-grid-glow),
+      transparent 68%
+    ),
+    linear-gradient(to right, var(--hero-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hero-grid-line) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    120px 120px,
+    120px 120px;
+  background-position:
+    center,
+    center bottom,
+    center bottom;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 16%,
+    rgba(0, 0, 0, 0.72) 43%,
+    rgba(0, 0, 0, 0.45) 72%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 16%,
+    rgba(0, 0, 0, 0.72) 43%,
+    rgba(0, 0, 0, 0.45) 72%,
+    transparent 100%
+  );
+}
+
+.page-hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__grid,
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(330px, 0.84fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.hero__content,
+.page-hero__content {
+  max-width: 760px;
+}
+
+.page-hero__content {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.hero h1,
+.page-hero h1 {
+  font-size: var(--h1-size);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.hero__text,
+.page-hero__text {
+  max-width: 640px;
+  margin: 24px 0 34px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 23px);
+}
+
+.page-hero__text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__actions,
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.page-hero__actions {
+  justify-content: center;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  z-index: 3;
+  width: 13px;
+  height: 13px;
+  border-right: 3px solid var(--orange-2);
+  border-bottom: 3px solid var(--orange-2);
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  pointer-events: none;
+  animation:
+    scrollHintArrowAppear 0.7s ease forwards 0.9s,
+    scrollHintArrowMove 1.6s ease-in-out infinite 1.6s;
+}
+
+@keyframes scrollHintArrowAppear {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 0.75;
+    filter: blur(0);
+  }
+}
+
+@keyframes scrollHintArrowMove {
+  0%,
+  100% {
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(-50%, 7px) rotate(45deg);
+  }
+}
+.hero__visual {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-orbit {
+  position: relative;
+  width: min(90vw, 520px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.hero-orbit__glow {
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 179, 71, 0.56) 0%,
+    rgba(255, 122, 0, 0.22) 38%,
+    rgba(255, 122, 0, 0.06) 62%,
+    transparent 76%
+  );
+  filter: blur(28px);
+  animation: heroGlowPulse 5.4s ease-in-out infinite;
+}
+
+.hero-orbit__ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center;
+  animation: heroRingPulse 6.4s ease-in-out infinite;
+}
+
+.hero-orbit__ring--one {
+  inset: 4%;
+  border: 1px solid rgba(255, 179, 71, 0.42);
+  box-shadow:
+    0 0 44px rgba(255, 122, 0, 0.2),
+    inset 0 0 42px rgba(255, 122, 0, 0.08);
+}
+
+.hero-orbit__ring--two {
+  inset: 14%;
+  border: 2px solid rgba(255, 122, 0, 0.38);
+  animation-delay: -1.8s;
+}
+
+.hero-orbit__ring--three {
+  inset: 25%;
+  border: 1px dashed rgba(255, 255, 255, 0.26);
+  animation-delay: -3.2s;
+}
+
+.hero-orbit__center {
+  position: relative;
+  z-index: 2;
+  width: min(40%, 190px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 32% 24%,
+      rgba(255, 255, 255, 0.13),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(255, 122, 0, 0.92), rgba(255, 179, 71, 0.84));
+  box-shadow:
+    0 32px 78px rgba(0, 0, 0, 0.38),
+    0 0 48px rgba(255, 122, 0, 0.3);
+  backdrop-filter: blur(14px);
+}
+
+.hero-orbit__center img {
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes heroRingPulse {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(0.94);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes heroGlowPulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.hero__content > *,
+.page-hero__content > * {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroFadeUp 0.8s ease forwards;
+}
+
+.hero__content .eyebrow,
+.page-hero__content .eyebrow {
+  animation-delay: 0.08s;
+}
+
+.hero__content h1,
+.page-hero__content h1 {
+  animation-delay: 0.18s;
+}
+
+.hero__content .hero__text,
+.page-hero__content .page-hero__text {
+  animation-delay: 0.32s;
+}
+
+.hero__actions,
+.page-hero__actions {
+  animation-delay: 0.48s;
+}
+
+.hero__visual {
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  animation: heroVisualIn 0.9s ease forwards;
+  animation-delay: 0.36s;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroVisualIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
+  overflow: hidden;
+}
+
+.section--dark,
+.section--soft {
+  background: transparent;
+}
