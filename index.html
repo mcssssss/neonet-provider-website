@@ -8,7 +8,11 @@
       content="NeoNet — інтернет-провайдер у Новояворівську та Яворівському районі. Швидкісний інтернет, інтерактивне телебачення та технічна підтримка."
     />
     <title>NeoNet — інтернет твого міста</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/brand/favicon.png" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/brand/favicon.png"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" defer></script>
   </head>
@@ -18,7 +22,6 @@
       <span class="site-bg__circle--two"></span>
       <span class="site-bg__circle--three"></span>
     </div>
-    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
     <header class="header">
       <div class="container header__inner">
         <a
@@ -77,6 +80,14 @@
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="container hero__grid">
           <div class="hero__content">
+            <!--
+              Термінове повідомлення на головній.
+              Щоб змінити текст — редагуй цей рядок(<p>). Щоб сховати — додай hidden до <p class="hero-alert" ... >.
+            -->
+            <p class="hero-alert">
+              Важливе повідомлення: у разі аварійних робіт або перебоїв
+              інформація буде опублікована тут.
+            </p>
             <p class="eyebrow">Інтернет твого міста</p>
             <h1>Швидкісний інтернет NeoNet</h1>
             <p class="hero__text">
@@ -86,6 +97,13 @@
             <div class="hero__actions">
               <a class="btn" href="./price.html">Переглянути тарифи</a>
               <a class="btn btn--ghost" href="tel:+380676751539">Подзвонити</a>
+              <a
+                class="btn btn--ghost hero__news-btn"
+                href="#news"
+                data-news-cue
+              >
+                Останні новини
+              </a>
             </div>
           </div>
 
@@ -292,7 +310,11 @@
 
           <div class="about-feature-grid">
             <article class="about-feature">
-              <img src="./assets/icons/internet.png" alt="" aria-hidden="true" />
+              <img
+                src="./assets/icons/internet.png"
+                alt=""
+                aria-hidden="true"
+              />
               <div>
                 <h3>Висока швидкість</h3>
                 <p>

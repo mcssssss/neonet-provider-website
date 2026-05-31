@@ -7,6 +7,9 @@
 }
 
 .tariff-switcher__btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-height: 52px;
   padding: 12px 20px;
   border: 1px solid var(--ghost-button-border);
@@ -34,13 +37,18 @@
 
 .tariff-switcher__btn.is-active {
   border-color: transparent;
-  background: linear-gradient(135deg, var(--orange), var(--orange-2));
+  background: #ff9a2f;
+  background-clip: padding-box;
   color: #111827;
-  box-shadow: 0 14px 36px rgba(255, 122, 0, 0.28);
+  box-shadow: none;
 }
 
 .tariff-panel[hidden] {
   display: none;
+}
+
+.tariff-panel {
+  scroll-margin-top: 124px;
 }
 
 .tariff-panel__heading {

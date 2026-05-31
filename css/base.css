@@ -300,24 +300,6 @@ select {
   margin-inline: auto;
 }
 
-.skip-link {
-  position: fixed;
-  left: 16px;
-  top: 16px;
-  z-index: 100;
-  transform: translateY(-140%);
-  padding: 12px 16px;
-  border-radius: 14px;
-  background: #fff;
-  color: #111827;
-  font-weight: 800;
-  transition: transform var(--transition);
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}
-
 .btn {
   display: inline-flex;
   align-items: center;

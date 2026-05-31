@@ -1,11 +1,28 @@
+.page-hero ~ .section .section-heading,
+.page-hero ~ .section .news-slider__header,
+.page-hero ~ .section .news-card,
+.page-hero ~ .section .tv-image,
+.page-hero ~ .section .tv-section__content,
+.page-hero ~ .section .about-grid,
+.page-hero ~ .section .about-feature,
+.page-hero ~ .section .support-map,
+.page-hero ~ .section .support-contact,
+.page-hero ~ .section .tariff-switcher,
+.page-hero ~ .section .tariff-panel__heading,
+.page-hero ~ .section .tariff-plan-card,
+.page-hero ~ .section .service-card,
+.page-hero ~ .section .megogo-plan-card,
+.page-hero ~ .section .promotion-card,
+.page-hero ~ .section .info-group__heading,
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(40px);
   transition:
-    opacity 0.55s ease,
-    transform 0.55s ease;
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
+.page-hero ~ .section .is-visible,
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);

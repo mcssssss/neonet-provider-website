@@ -150,6 +150,8 @@ if (menuButton && navigation) {
 const newsSlider = document.querySelector("[data-news-slider]")
 const newsPrevButton = document.querySelector("[data-news-prev]")
 const newsNextButton = document.querySelector("[data-news-next]")
+const newsCueButton = document.querySelector("[data-news-cue]")
+const newsSection = document.querySelector("#news")
 const tariffTabButtons = document.querySelectorAll("[data-tariff-tab]")
 const tariffPanels = document.querySelectorAll("[data-tariff-panel]")
 
@@ -221,6 +223,22 @@ if (newsSlider && newsPrevButton && newsNextButton) {
   updateNewsControls()
 }
 
+if (newsCueButton && newsSection && "IntersectionObserver" in window) {
+  const newsCueObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        newsCueButton.classList.toggle("is-hidden", entry.isIntersecting)
+      })
+    },
+    {
+      rootMargin: "-18% 0px -55% 0px",
+      threshold: 0.01,
+    },
+  )
+
+  newsCueObserver.observe(newsSection)
+}
+
 if (tariffTabButtons.length && tariffPanels.length) {
   tariffTabButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -237,12 +255,21 @@ if (tariffTabButtons.length && tariffPanels.length) {
         panel.classList.toggle("is-active", isActive)
         panel.toggleAttribute("hidden", !isActive)
       })
+
+      const tariffsSection = document.querySelector("#tariffs")
+
+      tariffsSection?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      })
     })
   })
 }
 
 const revealElements = document.querySelectorAll(
-  ".section-heading, .news-slider__header, .news-card, .tv-image, .tv-section__content, .about-grid, .about-feature, .support-map, .support-contact, .tariff-switcher, .tariff-panel__heading, .tariff-plan-card, .service-card, .megogo-plan-card, .promotion-card",
+  ".section-heading, .news-slider__header, .news-card, .tv-image, .tv-section__content, .about-grid, .about-feature, .support-map, .support-contact, .tariff-switcher, .tariff-panel__heading, .tariff-plan-card, .service-card, .megogo-plan-card, .promotion-card, .info-group__heading",
 )
 
 if ("IntersectionObserver" in window) {
@@ -256,8 +283,8 @@ if ("IntersectionObserver" in window) {
       })
     },
     {
-      rootMargin: "0px 0px -12% 0px",
-      threshold: 0.12,
+      rootMargin: "0px 0px -20% 0px",
+      threshold: 0.08,
     },
   )
 

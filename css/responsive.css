@@ -17,6 +17,7 @@
   .page-hero__content > *,
   .hero__visual {
     opacity: 1;
+    filter: none;
     transform: none;
   }
 }
@@ -219,6 +220,8 @@
 
   .page-hero {
     min-height: 500px;
+    padding-top: 136px;
+    padding-bottom: 64px;
   }
 
   .tariff-switcher__btn {
@@ -511,7 +514,7 @@
   :root {
     --h1-size: clamp(32px, 10.5vw, 38px);
     --section-padding: 56px;
-    --hero-padding: 112px 0 58px;
+    --hero-padding: 140px 0 58px;
     --radius: 20px;
   }
 
@@ -588,6 +591,23 @@
     gap: 28px;
   }
 
+  body:has(.footer--home) .section:not(.news-section) {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .hero + .news-section {
+    padding-top: 48px;
+    padding-bottom: 58px;
+  }
+
+  .hero-alert {
+    bottom: calc(100% + 12px);
+    max-width: min(100%, 560px);
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
   .hero h1,
   .page-hero h1 {
     letter-spacing: -0.035em;
@@ -601,8 +621,8 @@
   }
 
   .page-hero__text {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
   .page-hero::after {
     bottom: 20px;
@@ -689,7 +709,7 @@
   }
 
   .page-hero {
-    min-height: 430px;
+    min-height: 470px;
     padding-top: 120px;
     padding-bottom: 62px;
   }
