@@ -84,21 +84,39 @@
   max-width: 760px;
 }
 
-.hero__content {
+.hero-kicker {
   position: relative;
+  min-height: 28px;
+  margin-bottom: 12px;
+}
+
+.hero-kicker .eyebrow {
+  margin-bottom: 0;
+  visibility: hidden;
+}
+
+.hero-alert[hidden] + .eyebrow {
+  visibility: visible;
 }
 
 .hero-alert {
   position: absolute;
   left: 0;
-  bottom: calc(100% + 16px);
-  max-width: min(620px, 100%);
+  top: 50%;
+  z-index: 3;
+  max-width: min(660px, 100%);
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 77, 79, 0.32);
+  border-radius: 12px;
+  background: rgba(255, 77, 79, 0.08);
+  transform: translateY(-50%);
   margin: 0;
   color: #ff4d4f;
   font-size: 15px;
   font-weight: 900;
-  line-height: 1.4;
-
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .page-hero__content {

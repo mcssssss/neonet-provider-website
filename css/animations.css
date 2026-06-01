@@ -1,3 +1,10 @@
+.hero ~ .section .section-heading,
+.hero ~ .section .news-slider__header,
+.hero ~ .section .news-card,
+.hero ~ .section .tv-image,
+.hero ~ .section .tv-section__content,
+.hero ~ .section .about-grid,
+.hero ~ .section .about-feature,
 .page-hero ~ .section .section-heading,
 .page-hero ~ .section .news-slider__header,
 .page-hero ~ .section .news-card,
@@ -22,6 +29,7 @@
     transform 0.8s ease;
 }
 
+.hero ~ .section .is-visible,
 .page-hero ~ .section .is-visible,
 .reveal.is-visible {
   opacity: 1;
