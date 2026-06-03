@@ -23,15 +23,29 @@
 .page-hero ~ .section .info-group__heading,
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(28px);
   transition:
     opacity 0.8s ease,
     transform 0.8s ease;
 }
 
+.reveal > .reveal-item {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
 .hero ~ .section .is-visible,
 .page-hero ~ .section .is-visible,
 .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.is-visible > .reveal-item {
   opacity: 1;
   transform: translateY(0);
 }

@@ -2,6 +2,7 @@ const header = document.querySelector(".header")
 const menuButton = document.querySelector(".menu-toggle")
 const navigation = document.querySelector(".nav")
 const themeToggles = document.querySelectorAll("[data-theme-toggle]")
+const mobileHeaderQuery = window.matchMedia("(max-width: 820px)")
 
 const getStoredTheme = () => {
   try {
@@ -54,13 +55,56 @@ const closeMenu = () => {
   document.body.classList.remove("menu-open")
 }
 
+let lastScrollY = window.scrollY
+let isHeaderTicking = false
+let headerScrollDistance = 0
+
 const toggleHeaderState = () => {
   if (!header) return
-  header.classList.toggle("is-scrolled", window.scrollY > 12)
+
+  const currentScrollY = window.scrollY
+  const scrollDelta = currentScrollY - lastScrollY
+
+  header.classList.toggle("is-scrolled", currentScrollY > 12)
+
+  if (
+    !mobileHeaderQuery.matches ||
+    document.body.classList.contains("menu-open")
+  ) {
+    header.classList.remove("is-hidden")
+    headerScrollDistance = 0
+    lastScrollY = currentScrollY
+    return
+  }
+
+  if (Math.abs(scrollDelta) < 12) return
+
+  if (scrollDelta > 0 && currentScrollY > 140) {
+    headerScrollDistance += scrollDelta
+
+    if (headerScrollDistance > 56) {
+      header.classList.add("is-hidden")
+    }
+  } else if (scrollDelta < 0) {
+    headerScrollDistance = 0
+    header.classList.remove("is-hidden")
+  }
+
+  lastScrollY = currentScrollY
+}
+
+const requestHeaderStateUpdate = () => {
+  if (isHeaderTicking) return
+
+  isHeaderTicking = true
+  window.requestAnimationFrame(() => {
+    toggleHeaderState()
+    isHeaderTicking = false
+  })
 }
 
 toggleHeaderState()
-window.addEventListener("scroll", toggleHeaderState, { passive: true })
+window.addEventListener("scroll", requestHeaderStateUpdate, { passive: true })
 
 if (themeToggles.length) {
   themeToggles.forEach(themeToggle => {
@@ -120,6 +164,11 @@ if (menuButton && navigation) {
       isOpen ? "Закрити меню" : "Відкрити меню",
     )
     document.body.classList.toggle("menu-open", isOpen)
+
+    if (isOpen) {
+      header?.classList.remove("is-hidden")
+      headerScrollDistance = 0
+    }
   })
 
   navigation.addEventListener("click", event => {
@@ -143,9 +192,17 @@ if (menuButton && navigation) {
   window.addEventListener("resize", () => {
     if (window.innerWidth > 820) {
       closeMenu()
+      header?.classList.remove("is-hidden")
+      headerScrollDistance = 0
     }
   })
 }
+
+mobileHeaderQuery.addEventListener("change", () => {
+  header?.classList.remove("is-hidden")
+  headerScrollDistance = 0
+  lastScrollY = window.scrollY
+})
 
 const newsSlider = document.querySelector("[data-news-slider]")
 const newsPrevButton = document.querySelector("[data-news-prev]")
@@ -271,6 +328,20 @@ if (tariffTabButtons.length && tariffPanels.length) {
 const revealElements = document.querySelectorAll(
   ".section-heading, .news-slider__header, .news-card, .tv-image, .tv-section__content, .about-grid, .about-feature, .support-map, .support-contact, .tariff-switcher, .tariff-panel__heading, .tariff-plan-card, .service-card, .megogo-plan-card, .promotion-card, .info-group__heading",
 )
+const mobileRevealQuery = window.matchMedia("(max-width: 820px)")
+
+const prepareRevealElement = element => {
+  const revealItems = Array.from(element.children).filter(
+    child => !child.hidden && !child.matches("script, style"),
+  )
+
+  element.classList.add("reveal")
+
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal-item")
+    item.style.setProperty("--reveal-delay", `${Math.min(index * 80, 480)}ms`)
+  })
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -283,12 +354,14 @@ if ("IntersectionObserver" in window) {
       })
     },
     {
-      rootMargin: "0px 0px -20% 0px",
+      rootMargin: mobileRevealQuery.matches
+        ? "0px 0px -8% 0px"
+        : "0px 0px -20% 0px",
       threshold: 0.08,
     },
   )
 
-  revealElements.forEach(element => element.classList.add("reveal"))
+  revealElements.forEach(prepareRevealElement)
   revealElements.forEach(element => revealObserver.observe(element))
 } else {
   revealElements.forEach(element => element.classList.add("is-visible"))
